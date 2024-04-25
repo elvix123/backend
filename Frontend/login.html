@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión o registrarse</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 300px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 3px;
+            color: #fff;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #0056b3;
+        }
+        .switch-form {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .switch-form a {
+            color: #007bff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Iniciar sesión</h2>
+    <form action="/login" method="POST">
+        <div class="form-group">
+            <label for="login-username">Nombre de usuario:</label>
+            <input type="text" id="login-username" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="login-password">Contraseña:</label>
+            <input type="password" id="login-password" name="password" required>
+        </div>
+        <div class="form-group">
+            <button type="submit">Iniciar sesión</button>
+        </div>
+    </form>
+    <div class="switch-form">
+        <span>¿No tienes una cuenta? </span><a href="./register.html" onclick="switchToRegister()">Registrarse</a>
+    </div>
+</div>
+
+<div class="container" style="display: none;" id="register-form">
+    <h2>Registrarse</h2>
+    <form action="/register" method="POST">
+        <div class="form-group">
+            <label for="register-username">Nombre de usuario:</label>
+            <input type="text" id="register-username" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="register-password">Contraseña:</label>
+            <input type="password" id="register-password" name="password" required>
+        </div>
+        <div class="form-group">
+            <button type="submit">Registrarse</button>
+        </div>
+    </form>
+    
+</div>
+
+
+
+</body>
+</html>
